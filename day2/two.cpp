@@ -15,6 +15,7 @@ std::vector<std::int64_t> parse(char* line) {
 bool checker(auto t) {
 	return (t < 1 or std::abs(t)>3);
 }
+
 int main() {
 	std::ifstream file("in.in");
 	std::string line;
@@ -29,7 +30,7 @@ int main() {
 			val += 2;
 
 		bool check = true;
-		int bruh = -2,ex=0;
+		std::int64_t bruh = -2,ex=0;
 		for (auto iter : data) {
 			auto t = val - iter;
 			if (not order)
